@@ -16,6 +16,7 @@ public class adn extends javax.swing.JFrame {
      */
     public adn() {
         initComponents();
+          setTitle("DECODIFICADOR ADN");
     }
 
     /**
@@ -27,13 +28,24 @@ public class adn extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
         ButtonSalir1 = new javax.swing.JButton();
         ButtonJugar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/adn22.jpg"))); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 3, 24)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Daniel Fernández - 201731816");
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 420, 340, 50));
+
+        jLabel9.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 3, 48)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("\"DECODIFICADOR ADN\"");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 20, 490, 60));
 
         ButtonSalir1.setBackground(new java.awt.Color(255, 255, 255));
         ButtonSalir1.setFont(new java.awt.Font("Gill Sans Ultra Bold", 3, 36)); // NOI18N
@@ -44,6 +56,7 @@ public class adn extends javax.swing.JFrame {
                 ButtonSalir1ActionPerformed(evt);
             }
         });
+        getContentPane().add(ButtonSalir1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, -1, -1));
 
         ButtonJugar.setBackground(new java.awt.Color(255, 255, 255));
         ButtonJugar.setFont(new java.awt.Font("Gill Sans Ultra Bold", 3, 48)); // NOI18N
@@ -54,34 +67,10 @@ public class adn extends javax.swing.JFrame {
                 ButtonJugarActionPerformed(evt);
             }
         });
+        getContentPane().add(ButtonJugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 820, 100));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ButtonSalir1)
-                    .addComponent(ButtonJugar, javax.swing.GroupLayout.PREFERRED_SIZE, 849, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(220, 220, 220)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1839, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(287, 287, 287)
-                        .addComponent(ButtonJugar, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(62, 62, 62)
-                        .addComponent(ButtonSalir1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 964, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/adn22.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1630, 490));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -139,5 +128,7 @@ public class adn extends javax.swing.JFrame {
     private javax.swing.JButton ButtonJugar;
     private javax.swing.JButton ButtonSalir1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel9;
     // End of variables declaration//GEN-END:variables
 }

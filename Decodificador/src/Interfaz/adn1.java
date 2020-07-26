@@ -28,6 +28,7 @@ public class adn1 extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel4 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -45,6 +46,11 @@ public class adn1 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel8.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 3, 36)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText(".");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 170, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 3, 48)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
@@ -129,8 +135,11 @@ public class adn1 extends javax.swing.JFrame {
 
     private void jButtonRegresarCrearvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegresarCrearvActionPerformed
         // TODO add your handling code here:
-        //Persona persona = new Persona(jTextFieldNombre.getText() );
-        //lista.add(persona);
+      
+        initComponents();
+         this.setLocationRelativeTo(null);
+        setSize(1490, 1200);
+        setTitle("DECODIFICADOR ADN");
         this.setVisible(false);
 
         new adn ().setVisible(true);
@@ -194,6 +203,7 @@ public class adn1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField jTextFieldV1;
     private javax.swing.JTextField jTextFieldV2;
