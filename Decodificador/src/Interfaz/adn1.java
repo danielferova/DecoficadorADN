@@ -16,6 +16,9 @@ public class adn1 extends javax.swing.JFrame {
      */
     public adn1() {
         initComponents();
+         setTitle("DECODIFICADOR ADN");
+              this.setLocationRelativeTo(null);
+        setSize(490, 800);
     }
 
     /**
@@ -28,7 +31,7 @@ public class adn1 extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel4 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        Jresultado = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -45,12 +48,12 @@ public class adn1 extends javax.swing.JFrame {
         jLabel4.setText("Crear Tanques");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel8.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 3, 36)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText(".");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 170, -1, -1));
+        Jresultado.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 3, 55)); // NOI18N
+        Jresultado.setForeground(new java.awt.Color(255, 0, 0));
+        getContentPane().add(Jresultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 160, 260, 70));
 
         jLabel9.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 3, 48)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
@@ -65,29 +68,29 @@ public class adn1 extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 3, 36)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("= ");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 170, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 180, -1, -1));
 
         jButtonRegresarCrearv.setBackground(new java.awt.Color(255, 255, 255));
         jButtonRegresarCrearv.setFont(new java.awt.Font("Dubai", 3, 36)); // NOI18N
-        jButtonRegresarCrearv.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonRegresarCrearv.setText("Regresar");
+        jButtonRegresarCrearv.setForeground(new java.awt.Color(0, 0, 204));
+        jButtonRegresarCrearv.setText("SALIR ");
         jButtonRegresarCrearv.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonRegresarCrearvActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonRegresarCrearv, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, 180, 50));
+        getContentPane().add(jButtonRegresarCrearv, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, 220, 70));
 
         jButtonCrearA.setBackground(new java.awt.Color(255, 255, 255));
         jButtonCrearA.setFont(new java.awt.Font("Dubai", 3, 48)); // NOI18N
-        jButtonCrearA.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonCrearA.setForeground(new java.awt.Color(0, 51, 204));
         jButtonCrearA.setText("Procesar");
         jButtonCrearA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCrearAActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonCrearA, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 380, 340, 90));
+        getContentPane().add(jButtonCrearA, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 300, 340, 90));
 
         jTextFieldV1.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldV1.setFont(new java.awt.Font("Ebrima", 3, 24)); // NOI18N
@@ -136,16 +139,15 @@ public class adn1 extends javax.swing.JFrame {
     private void jButtonRegresarCrearvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegresarCrearvActionPerformed
         // TODO add your handling code here:
       
-        initComponents();
-         this.setLocationRelativeTo(null);
-        setSize(1490, 1200);
-        setTitle("DECODIFICADOR ADN");
-        this.setVisible(false);
+      
+     System.exit(0);
+       
+       /* this.setVisible(false);
 
         new adn ().setVisible(true);
 
-        setSize(1290, 1000);
-        dispose();
+        setSize(1250, 550);
+        dispose();*/
         
     }//GEN-LAST:event_jButtonRegresarCrearvActionPerformed
 
@@ -155,10 +157,62 @@ public class adn1 extends javax.swing.JFrame {
         //entrada2.show();
         //entrada2.setSize(1290, 1000);
         //dispose();
-
+        String cadena1 = jTextFieldV1.getText();
+        String cadena2 = jTextFieldV2.getText();
+        String bases = Jresultado.getText();
         
-    }//GEN-LAST:event_jButtonCrearAActionPerformed
+        if(cadena1.length() >= cadena2.length()){
 
+            for (int r = cadena1.length(); r >= 0; r--)   //el primer for irá acotando de derecha a izquierda el rango de búsqueda
+        //el contador comienza en el valor de la longitud de la variable cadena1 va disminuendo
+     
+            {
+            
+                      for (int l = 0; l < r; l++) //el segundo for irá acotando de izquierda a derecha, se va incrementando
+        
+            //sin llegar a ser igual que el valor actual de la variable r
+            //que viene acotando por la derecha
+            {
+             
+                  //aquí verificamos dos condiciones:
+                
+                //1. que la porción de la cadena extraida de la variable cadena1 
+                //se encuentra en la variable cadena2
+                if (cadena2.contains(cadena1.substring(l, r)) && 
+ 
+                    bases.length() < cadena1.substring(l, r).length())  //2. que la longitud de la ultima coincidencia encontrada
+                //sea menor a la longitud de la nueva coincidencia encontrada
+                {
+                  bases = cadena1.substring(l, r);//si se cumplen ambas condiciones almacenamos el nuevo valor  
+                  
+                }
+ 
+            }
+            
+        }
+        Jresultado.setText(bases);
+    //    System.out.println("Resultado: "+ bases); //imprimo el resultado de los dos strings
+}
+        
+                  else if(cadena2.length() >= cadena1.length()) //la misma condicion pero ahora para ver la cadena 2 sea mayor a la cadena 1
+                {
+
+                    for (int r = cadena2.length(); r >= 0; r--)
+                    {
+            
+                      for (int l = 0; l < r; l++) {
+                         if (cadena1.contains(cadena2.substring(l, r)) && 
+                             bases.length() < cadena2.substring(l, r).length()) {
+                               bases = cadena2.substring(l, r);
+                                  }
+                        }
+            
+        }
+                    
+                    
+        Jresultado.setText(bases);
+    }//GEN-LAST:event_jButtonCrearAActionPerformed
+}
     /**
      * @param args the command line arguments
      */
@@ -195,6 +249,7 @@ public class adn1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Jresultado;
     private javax.swing.JButton jButtonCrearA;
     private javax.swing.JButton jButtonRegresarCrearv;
     private javax.swing.JLabel jLabel1;
@@ -203,7 +258,6 @@ public class adn1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField jTextFieldV1;
     private javax.swing.JTextField jTextFieldV2;

@@ -17,6 +17,7 @@ public class adn extends javax.swing.JFrame {
     public adn() {
         initComponents();
           setTitle("DECODIFICADOR ADN");
+          this.setLocationRelativeTo(null);
     }
 
     /**
@@ -30,44 +31,32 @@ public class adn extends javax.swing.JFrame {
 
         jLabel10 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        ButtonSalir1 = new javax.swing.JButton();
-        ButtonJugar = new javax.swing.JButton();
+        ButtonADN = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel10.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 3, 24)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 3, 48)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Daniel Fernández - 201731816");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 420, 340, 50));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 350, 670, 70));
 
         jLabel9.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 3, 48)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("\"DECODIFICADOR ADN\"");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 20, 490, 60));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, 490, 60));
 
-        ButtonSalir1.setBackground(new java.awt.Color(255, 255, 255));
-        ButtonSalir1.setFont(new java.awt.Font("Gill Sans Ultra Bold", 3, 36)); // NOI18N
-        ButtonSalir1.setForeground(new java.awt.Color(255, 255, 255));
-        ButtonSalir1.setText("2. SALIR DEL DECODIFICADOR");
-        ButtonSalir1.addActionListener(new java.awt.event.ActionListener() {
+        ButtonADN.setBackground(new java.awt.Color(255, 255, 255));
+        ButtonADN.setFont(new java.awt.Font("Gill Sans Ultra Bold", 3, 48)); // NOI18N
+        ButtonADN.setForeground(new java.awt.Color(0, 0, 255));
+        ButtonADN.setText("\"DECODIFICADOR ADN\"");
+        ButtonADN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ButtonSalir1ActionPerformed(evt);
+                ButtonADNActionPerformed(evt);
             }
         });
-        getContentPane().add(ButtonSalir1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, -1, -1));
-
-        ButtonJugar.setBackground(new java.awt.Color(255, 255, 255));
-        ButtonJugar.setFont(new java.awt.Font("Gill Sans Ultra Bold", 3, 48)); // NOI18N
-        ButtonJugar.setForeground(new java.awt.Color(255, 255, 255));
-        ButtonJugar.setText("1. DECODIFICADOR ADN");
-        ButtonJugar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ButtonJugarActionPerformed(evt);
-            }
-        });
-        getContentPane().add(ButtonJugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 820, 100));
+        getContentPane().add(ButtonADN, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, 880, 170));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/adn22.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1630, 490));
@@ -75,19 +64,14 @@ public class adn extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ButtonJugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonJugarActionPerformed
+    private void ButtonADNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonADNActionPerformed
         // TODO add your handling code here:
 
         adn1 entrada1 = new adn1();
         entrada1.show();
-        entrada1.setSize(400, 400);
+        entrada1.setSize(1250, 590);
         dispose();
-    }//GEN-LAST:event_ButtonJugarActionPerformed
-
-    private void ButtonSalir1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSalir1ActionPerformed
-        // TODO add your handling code here:
-        System.exit(0);
-    }//GEN-LAST:event_ButtonSalir1ActionPerformed
+    }//GEN-LAST:event_ButtonADNActionPerformed
 
     /**
      * @param args the command line arguments
@@ -125,8 +109,7 @@ public class adn extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton ButtonJugar;
-    private javax.swing.JButton ButtonSalir1;
+    private javax.swing.JButton ButtonADN;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel9;

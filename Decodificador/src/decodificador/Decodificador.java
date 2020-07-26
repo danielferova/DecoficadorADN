@@ -5,6 +5,7 @@
  */
 package decodificador;
 
+import Interfaz.adn;
 import java.util.Scanner;
 
 /**
@@ -17,8 +18,11 @@ public class Decodificador {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+         adn entrada = new adn();
+         entrada.show();
+         entrada.setSize(1250, 550);
        //DANIEL FERNÁNDEZ - 201731816
-       Scanner entrada = new Scanner(System.in);
+     /* Scanner entrada = new Scanner(System.in);
        String cadena1;
        String cadena2;
        
@@ -83,7 +87,7 @@ public class Decodificador {
             
         }
         System.out.println("Resultado: "+ bases); //imprimo el resultado de los dos strings
-}
+}*/
     }
     
 }
