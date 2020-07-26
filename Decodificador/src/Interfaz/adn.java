@@ -69,7 +69,7 @@ public class adn extends javax.swing.JFrame {
 
         adn1 entrada1 = new adn1();
         entrada1.show();
-        entrada1.setSize(1250, 590);
+        entrada1.setSize(1250, 540);
         dispose();
     }//GEN-LAST:event_ButtonADNActionPerformed
 

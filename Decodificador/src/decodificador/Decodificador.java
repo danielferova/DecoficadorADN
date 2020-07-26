@@ -20,7 +20,7 @@ public class Decodificador {
     public static void main(String[] args) {
          adn entrada = new adn();
          entrada.show();
-         entrada.setSize(1250, 550);
+         entrada.setSize(1250, 510);
        //DANIEL FERNÁNDEZ - 201731816
      /* Scanner entrada = new Scanner(System.in);
        String cadena1;

@@ -79,7 +79,7 @@ public class adn1 extends javax.swing.JFrame {
                 jButtonRegresarCrearvActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonRegresarCrearv, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, 220, 70));
+        getContentPane().add(jButtonRegresarCrearv, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, 220, 70));
 
         jButtonCrearA.setBackground(new java.awt.Color(255, 255, 255));
         jButtonCrearA.setFont(new java.awt.Font("Dubai", 3, 48)); // NOI18N
@@ -90,7 +90,7 @@ public class adn1 extends javax.swing.JFrame {
                 jButtonCrearAActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonCrearA, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 300, 340, 90));
+        getContentPane().add(jButtonCrearA, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 280, 340, 90));
 
         jTextFieldV1.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldV1.setFont(new java.awt.Font("Ebrima", 3, 24)); // NOI18N
