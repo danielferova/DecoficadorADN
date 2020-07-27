@@ -13,28 +13,26 @@ import java.util.Scanner;
  * @author danie
  */
 public class Decodificador {
-
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+         //DANIEL FERNÁNDEZ - 201731816
          adn entrada = new adn();
          entrada.show();
-         entrada.setSize(1250, 510);
-       //DANIEL FERNÁNDEZ - 201731816
-     /* Scanner entrada = new Scanner(System.in);
-       String cadena1;
-       String cadena2;
-       
+         entrada.setSize(1250, 510);       
          
-        System.out.println(" ----- Bienvenidos a DECODIFICADOR ADN ------   ");
+     /* Scanner entrada = new Scanner(System.in);
+      // String cadena1;
+       //String cadena2;
+      //  System.out.println(" ----- Bienvenidos a DECODIFICADOR ADN ------   ");
   
-        System.out.print("Ingrese el ADN 1: ");
-        cadena1 = entrada.nextLine(); //variable que almacena la primera secuencia
-        System.out.println("--------------------------------------");
-        System.out.print("Ingrese el ADN 2: ");
-        cadena2 = entrada.nextLine(); //variable que me almacena mi segunda secuencia
-        String bases = "";  //variable que almacena el resultado, es el conjunto ordenado de las bases de mayor tamaño en ambas secuencias
+        //System.out.print("Ingrese el ADN 1: ");
+        //cadena1 = entrada.nextLine(); //variable que almacena la primera secuencia
+        //System.out.println("--------------------------------------");
+        //System.out.print("Ingrese el ADN 2: ");
+        //cadena2 = entrada.nextLine(); //variable que me almacena mi segunda secuencia
+       // String bases = "";  //variable que almacena el resultado, es el conjunto ordenado de las bases de mayor tamaño en ambas secuencias
      
         
         //Utilizamos dos iteraciones for para realizar la búsqueda. 
@@ -84,10 +82,10 @@ public class Decodificador {
                                bases = cadena2.substring(l, r);
                                   }
                         }
-            
         }
         System.out.println("Resultado: "+ bases); //imprimo el resultado de los dos strings
 }*/
     }
+
     
 }

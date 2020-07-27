@@ -18,6 +18,7 @@ public class adn extends javax.swing.JFrame {
         initComponents();
           setTitle("DECODIFICADOR ADN");
           this.setLocationRelativeTo(null);
+          setSize(1250, 510);
     }
 
     /**
