@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package Interfaz;
+import decodificador.Proceso;
+import javax.swing.JTextField;
 
 /**
  *
@@ -18,7 +20,7 @@ public class adn1 extends javax.swing.JFrame {
         initComponents();
          setTitle("DECODIFICADOR ADN");
               this.setLocationRelativeTo(null);
-        setSize(490, 800);
+                 setSize(490, 800);
     }
 
     /**
@@ -31,6 +33,7 @@ public class adn1 extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel4 = new javax.swing.JLabel();
+        jButtonRegresarE = new javax.swing.JButton();
         Jresultado = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -50,6 +53,17 @@ public class adn1 extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButtonRegresarE.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonRegresarE.setFont(new java.awt.Font("Dubai", 3, 36)); // NOI18N
+        jButtonRegresarE.setForeground(new java.awt.Color(0, 51, 153));
+        jButtonRegresarE.setText("Regresar");
+        jButtonRegresarE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRegresarEActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonRegresarE, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 220, 80));
 
         Jresultado.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 3, 55)); // NOI18N
         Jresultado.setForeground(new java.awt.Color(255, 0, 0));
@@ -79,7 +93,7 @@ public class adn1 extends javax.swing.JFrame {
                 jButtonRegresarCrearvActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonRegresarCrearv, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, 220, 70));
+        getContentPane().add(jButtonRegresarCrearv, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, 220, 70));
 
         jButtonCrearA.setBackground(new java.awt.Color(255, 255, 255));
         jButtonCrearA.setFont(new java.awt.Font("Dubai", 3, 48)); // NOI18N
@@ -153,66 +167,28 @@ public class adn1 extends javax.swing.JFrame {
 
     private void jButtonCrearAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCrearAActionPerformed
         // TODO add your handling code here:
-      //  JuegoTableros entrada2 = new JuegoTableros();
-        //entrada2.show();
-        //entrada2.setSize(1290, 1000);
-        //dispose();
         String cadena1 = jTextFieldV1.getText();
         String cadena2 = jTextFieldV2.getText();
         String bases = Jresultado.getText();
         
-        if(cadena1.length() >= cadena2.length()){
-
-            for (int r = cadena1.length(); r >= 0; r--)   //el primer for irá acotando de derecha a izquierda el rango de búsqueda
-        //el contador comienza en el valor de la longitud de la variable cadena1 va disminuendo
+        Proceso p = new Proceso();
+        String resultado = p.obtenerResultado(cadena1, cadena2, bases);
+        Jresultado.setText(resultado);
+ 
      
-            {
-            
-                      for (int l = 0; l < r; l++) //el segundo for irá acotando de izquierda a derecha, se va incrementando
-        
-            //sin llegar a ser igual que el valor actual de la variable r
-            //que viene acotando por la derecha
-            {
-             
-                  //aquí verificamos dos condiciones:
-                
-                //1. que la porción de la cadena extraida de la variable cadena1 
-                //se encuentra en la variable cadena2
-                if (cadena2.contains(cadena1.substring(l, r)) && 
- 
-                    bases.length() < cadena1.substring(l, r).length())  //2. que la longitud de la ultima coincidencia encontrada
-                //sea menor a la longitud de la nueva coincidencia encontrada
-                {
-                  bases = cadena1.substring(l, r);//si se cumplen ambas condiciones almacenamos el nuevo valor  
-                  
-                }
- 
-            }
-            
-        }
-        Jresultado.setText(bases);
-    //    System.out.println("Resultado: "+ bases); //imprimo el resultado de los dos strings
-}
-        
-                  else if(cadena2.length() >= cadena1.length()) //la misma condicion pero ahora para ver la cadena 2 sea mayor a la cadena 1
-                {
-
-                    for (int r = cadena2.length(); r >= 0; r--)
-                    {
-            
-                      for (int l = 0; l < r; l++) {
-                         if (cadena1.contains(cadena2.substring(l, r)) && 
-                             bases.length() < cadena2.substring(l, r).length()) {
-                               bases = cadena2.substring(l, r);
-                                  }
-                        }
-            
-        }
-                    
-                    
-        Jresultado.setText(bases);
     }//GEN-LAST:event_jButtonCrearAActionPerformed
-}
+
+    private void jButtonRegresarEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegresarEActionPerformed
+        // TODO add your handling code here:
+    
+         this.setVisible(false);
+        new adn().setVisible(true);
+        setSize(825, 2266);
+          dispose();
+      
+    }//GEN-LAST:event_jButtonRegresarEActionPerformed
+
+    
     /**
      * @param args the command line arguments
      */
@@ -252,6 +228,7 @@ public class adn1 extends javax.swing.JFrame {
     private javax.swing.JLabel Jresultado;
     private javax.swing.JButton jButtonCrearA;
     private javax.swing.JButton jButtonRegresarCrearv;
+    private javax.swing.JButton jButtonRegresarE;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel4;
